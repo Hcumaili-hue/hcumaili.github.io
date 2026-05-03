@@ -1,0 +1,20 @@
+.book-btn {
+  display: inline-block;
+  padding: 14px 32px;
+  background: #111;
+  color: #c8a96a;
+  text-decoration: none;
+  border: 1px solid #c8a96a;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.book-btn:hover {
+  background: #1a1a1a;
+  color: #e0c48a;
+  border-color: #e0c48a;
+  transform: translateY(-2px);
+}
