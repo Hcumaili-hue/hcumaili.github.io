@@ -30,3 +30,7 @@
   margin-top: 30px;
   margin-bottom: 25px; 
 }
+.book-btn i {
+  margin-right: 8px;
+  font-size: 16px;
+}
