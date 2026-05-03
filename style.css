@@ -162,3 +162,18 @@
   color: #888;
   border: none;
 }
+.article {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 20px;
+    line-height: 1.8;
+    font-size: 17px;
+}
+
+.article h1, .article h2, .article h3 {
+    margin-top: 30px;
+}
+
+.article p {
+    margin: 15px 0;
+}
