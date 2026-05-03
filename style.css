@@ -119,3 +119,52 @@ body {
 .book-card {
     overflow: hidden;
 }
+/* ===== Article Reading Mode ===== */
+.article {
+    max-width: 720px; /* أضيق = مريح أكثر */
+    margin: 100px auto;
+    padding: 40px 25px;
+    line-height: 2.1; /* مسافة بين السطور */
+    font-size: 20px; /* تكبير النص */
+    background: #fffdf8; /* لون ورقي */
+    color: #222;
+}
+
+/* العنوان الرئيسي */
+.article h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+/* العناوين الفرعية */
+.article h2 {
+    font-size: 28px;
+    margin-top: 60px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 8px;
+}
+
+/* الفقرات */
+.article p {
+    margin-bottom: 22px;
+    text-align: justify; /* مثل الكتب */
+}
+
+/* مسافة بين الأقسام */
+.article h3 {
+    margin-top: 40px;
+}
+
+/* تحسين الموبايل */
+@media (max-width: 768px) {
+    .article {
+        font-size: 18px;
+        padding: 25px 15px;
+    }
+
+    .article h1 {
+        font-size: 36px;
+    }
+}
