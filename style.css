@@ -154,3 +154,41 @@ a:visited {
 a:hover {
     color: #e0c080;
 }
+/* ===== About Page ===== */
+
+.hero {
+    text-align: center;
+    padding: 80px 20px 40px;
+    background: #111;
+    color: #c8a96a;
+}
+
+.hero h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    color: #aaa;
+}
+
+.content {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 20px;
+    line-height: 2;
+    font-size: 18px;
+    background: #fffdf8;
+}
+
+.text-block p {
+    margin-bottom: 20px;
+}
+
+.text-block h3 {
+    margin-top: 40px;
+    margin-bottom: 15px;
+    font-size: 22px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
