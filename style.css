@@ -192,3 +192,11 @@ a:hover {
     border-bottom: 1px solid #ddd;
     padding-bottom: 5px;
 }
+.read-more {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: black;
+  color: white;
+  text-decoration: none;
+}
