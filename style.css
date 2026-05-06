@@ -1,11 +1,279 @@
-/* =========================
-   BOOK SECTION
-========================= */
+/* =========================================
+   H. Cumaili — Academic Style
+========================================= */
 
-.book-section{
+:root{
+
+    --bg:#f3efe6;
+    --paper:#faf8f3;
+
+    --black:#111111;
+
+    --gold:#b08a47;
+    --gold-light:#d4af63;
+
+    --text:#222222;
+
+    --line:#ddd1b3;
+}
+
+/* RESET */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    background:
+    linear-gradient(
+    rgba(243,239,230,0.95),
+    rgba(243,239,230,0.96)),
+    url("https://www.transparenttextures.com/patterns/paper-fibers.png");
+
+    color:var(--text);
+
+    font-family:'Inter',sans-serif;
+
+    line-height:1.9;
+}
+
+/* WRAPPER */
+
+.site-wrapper{
+
+    width:92%;
+    max-width:1250px;
+
+    margin:40px auto;
+
+    background:var(--paper);
+
+    border:1px solid var(--line);
+
+    padding:50px;
+
+    box-shadow:
+    0 12px 40px rgba(0,0,0,0.08);
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.site-wrapper::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:5px;
+
+    background:
+    linear-gradient(
+    90deg,
+    #7b5a26,
+    #d4af63,
+    #7b5a26);
+}
+
+/* TYPOGRAPHY */
+
+h1,h2,h3{
+
+    font-family:
+    'Cormorant Garamond',
+    serif;
+
+    color:#181818;
+}
+
+h1{
+
+    font-size:4.5rem;
+
+    line-height:1;
+
+    margin-bottom:20px;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+}
+
+h2{
+
+    font-size:2.6rem;
+
+    margin-bottom:28px;
+
+    border-bottom:1px solid var(--line);
+
+    padding-bottom:14px;
+}
+
+h3{
+
+    font-size:2.8rem;
+
+    margin-bottom:18px;
+}
+
+p{
+
+    font-size:1.05rem;
+
+    margin-bottom:24px;
+
+    color:#3a3a3a;
+}
+
+/* HERO */
+
+.hero{
+
+    display:grid;
+
+    grid-template-columns:
+    1.1fr 1fr;
+
+    gap:60px;
+
+    align-items:center;
+}
+
+.hero-image img{
+
+    width:100%;
+
+    display:block;
+
+    border:1px solid #2a2a2a;
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,0.12);
+}
+
+.hero-line{
+
+    width:90px;
+    height:2px;
+
+    background:var(--gold);
+
+    margin-bottom:25px;
+}
+
+.subtitle{
+
+    font-size:1.1rem;
+
+    color:#444;
+
+    margin-bottom:35px;
+}
+
+/* BUTTONS */
+
+.hero-buttons{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:18px;
+}
+
+.main-btn,
+.platform-btn{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    background:
+    linear-gradient(
+    180deg,
+    #181818,
+    #0d0d0d);
+
+    color:var(--gold-light);
+
+    border:1px solid var(--gold);
+
+    text-decoration:none;
+
+    transition:0.35s;
+
+    letter-spacing:0.5px;
+
+    box-shadow:
+    0 6px 18px rgba(0,0,0,0.15);
+}
+
+.main-btn{
+
+    padding:15px 28px;
+}
+
+.platform-btn{
+
+    padding:16px;
+
+    min-height:64px;
+}
+
+.main-btn:hover,
+.platform-btn:hover{
+
+    transform:
+    translateY(-4px);
+
+    background:#1d1d1d;
+
+    color:#f4cf82;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* SECTION */
+
+.section{
 
     margin-top:100px;
 }
+
+/* BLOCKQUOTE */
+
+blockquote{
+
+    border-left:3px solid var(--gold);
+
+    padding-left:18px;
+
+    margin-top:35px;
+
+    font-style:italic;
+
+    color:#666;
+}
+
+/* BOOK */
 
 .book-layout{
 
@@ -21,18 +289,13 @@
     margin-top:45px;
 }
 
-.book-cover{
-
-    position:relative;
-}
-
 .book-cover img{
 
     width:100%;
 
     display:block;
 
-    border:1px solid #d6c6a1;
+    border:1px solid var(--line);
 
     box-shadow:
     0 20px 50px rgba(0,0,0,0.14);
@@ -46,20 +309,111 @@
     translateY(-6px);
 }
 
-.book-details h3{
-
-    font-size:3rem;
-
-    margin-bottom:20px;
-}
-
 .book-details p{
 
     max-width:650px;
+}
 
-    font-size:1.08rem;
+/* AUTHOR */
 
-    color:#444;
+.author-box{
 
-    margin-bottom:30px;
+    display:flex;
+
+    align-items:center;
+
+    gap:40px;
+}
+
+.author-box img{
+
+    width:170px;
+    height:170px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    border:3px solid var(--gold);
+}
+
+/* PLATFORMS */
+
+.platform-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(240px,1fr));
+
+    gap:18px;
+}
+
+/* FOOTER */
+
+footer{
+
+    margin-top:100px;
+
+    border-top:1px solid var(--line);
+
+    padding-top:30px;
+
+    text-align:center;
+
+    color:#777;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    .site-wrapper{
+
+        width:96%;
+
+        padding:24px;
+    }
+
+    .hero,
+    .book-layout,
+    .author-box{
+
+        display:grid;
+
+        grid-template-columns:1fr;
+
+        gap:35px;
+    }
+
+    h1{
+
+        font-size:3rem;
+    }
+
+    h2{
+
+        font-size:2rem;
+    }
+
+    h3{
+
+        font-size:2.1rem;
+    }
+
+    .main-btn,
+    .platform-btn{
+
+        width:100%;
+    }
+
+    .author-box{
+
+        text-align:center;
+    }
+
+    .author-box img{
+
+        margin:auto;
+    }
 }
