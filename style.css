@@ -1,492 +1,181 @@
-/* =========================================
-   H. Cumaili — Academic Research Archive
-========================================= */
-
-/* ROOT */
-
-:root{
-
-    --bg:#f4f1e8;
-    --paper:#fbf8f2;
-
-    --text:#232323;
-
-    --black:#171717;
-
-    --gold:#b08a47;
-    --gold-light:#d7b26b;
-
-    --line:#ddd2b7;
+/* ===== General ===== */
+body {
+    font-family: Georgia, serif;
+    margin: 0;
+    background: #f9f9f9;
+    color: #222;
 }
 
-/* RESET */
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+/* ===== Global Links ===== */
+a {
+    color: #c8a96a;
+    text-decoration: none;
 }
 
-html{
-    scroll-behavior:smooth;
+a:visited {
+    color: #c8a96a;
 }
 
-body{
-
-    background:var(--bg);
-
-    color:var(--text);
-
-    font-family:'Inter',sans-serif;
-
-    line-height:1.85;
-
-    -webkit-font-smoothing:antialiased;
+a:hover {
+    color: #e0c080;
 }
 
-img{
-
-    max-width:100%;
-
-    display:block;
+/* ===== Unified Buttons ===== */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #111;
+    color: #c8a96a;
+    border: 1px solid #c8a96a;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s;
+    font-size: 14px;
 }
 
-a{
-
-    text-decoration:none;
+.btn:hover {
+    background: #c8a96a;
+    color: #000;
 }
 
-/* TEXT SELECTION */
-
-::selection{
-
-    background:var(--gold);
-
-    color:white;
+/* ===== Hero Section ===== */
+.hero {
+    text-align: center;
+    padding: 80px 20px 40px;
+    background: #111;
+    color: #c8a96a;
 }
 
-/* SITE */
-
-.site{
-
-    width:100%;
-
-    overflow:hidden;
+.hero h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
 }
 
-/* =========================================
-   HERO
-========================================= */
-
-.hero{
-
-    background:#161616;
-
-    border-bottom:1px solid #2b2b2b;
-
-    padding:85px 0 75px;
+.hero p {
+    color: #aaa;
 }
 
-.hero-content{
-
-    width:min(92%, 1040px);
-
-    margin:auto;
+/* ===== Content ===== */
+.content {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 20px;
+    line-height: 2;
+    font-size: 18px;
+    background: #fffdf8;
 }
 
-.top-label{
-
-    color:var(--gold-light);
-
-    letter-spacing:4px;
-
-    font-size:0.78rem;
-
-    margin-bottom:18px;
+.text-block p {
+    margin-bottom: 20px;
 }
 
-/* HEADINGS */
-
-h1,h2,h3{
-
-    font-family:'EB Garamond', serif;
-
-    font-weight:600;
-
-    letter-spacing:0.2px;
+.text-block h3 {
+    margin-top: 40px;
+    margin-bottom: 15px;
+    font-size: 22px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
 }
 
-h1{
-
-    color:white;
-
-    font-size:4rem;
-
-    line-height:1;
-
-    margin-bottom:24px;
+/* ===== Library Layout ===== */
+.library-container {
+    max-width: 1100px;
+    margin: 80px auto;
+    padding: 20px;
+    text-align: center;
 }
 
-.hero-text{
-
-    color:#dddddd;
-
-    max-width:760px;
-
-    font-size:1.04rem;
-
-    margin-bottom:34px;
+.library {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
 }
 
-/* HERO BUTTONS */
-
-.hero-buttons{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:22px;
-
-    flex-wrap:wrap;
+/* ===== Book Cards ===== */
+.book-card {
+    display: block;
+    background: #111;
+    color: #c8a96a;
+    padding: 40px 20px;
+    border-radius: 12px;
+    text-decoration: none;
+    border: 1px solid #c8a96a;
+    transition: 0.3s;
 }
 
-/* MAIN BUTTON */
-
-.main-btn{
-
-    display:inline-flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    background:var(--black);
-
-    color:var(--gold-light);
-
-    border:1px solid var(--gold);
-
-    padding:13px 24px;
-
-    font-size:0.92rem;
-
-    font-weight:500;
-
-    letter-spacing:0.4px;
-
-    transition:0.25s;
+.book-card:hover {
+    transform: translateY(-5px);
+    background: #1a1a1a;
 }
 
-.main-btn:hover{
-
-    background:#1f1f1f;
-
-    transform:translateY(-2px);
+.book-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
 }
 
-/* SECONDARY LINK */
-
-.secondary-link{
-
-    color:#cfcfcf;
-
-    font-size:0.94rem;
-
-    transition:0.25s;
+/* Disabled Card */
+.book-card.disabled {
+    background: #eee;
+    color: #888;
+    border: none;
 }
 
-.secondary-link:hover{
-
-    color:var(--gold-light);
+/* ===== Article (Reading Mode) ===== */
+.article {
+    max-width: 720px;
+    margin: 100px auto;
+    padding: 40px 25px;
+    line-height: 2.1;
+    font-size: 20px;
+    background: #fffdf8;
 }
 
-/* =========================================
-   SECTIONS
-========================================= */
-
-.section{
-
-    width:min(92%, 1040px);
-
-    margin:85px auto;
+.article h1 {
+    font-size: 42px;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-.section-header{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:16px;
-
-    margin-bottom:40px;
+.article h2 {
+    font-size: 26px;
+    margin-top: 60px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 8px;
 }
 
-.section-header span{
-
-    width:58px;
-    height:1px;
-
-    background:var(--gold);
+.article p {
+    margin-bottom: 22px;
+    text-align: justify;
 }
 
-h2{
-
-    font-size:2.5rem;
-
-    color:#171717;
+/* ===== Footer ===== */
+footer {
+    text-align: center;
+    padding: 30px;
+    font-size: 14px;
+    color: #777;
 }
 
-p{
+/* ===== Mobile ===== */
+@media (max-width: 768px) {
+    .article {
+        font-size: 18px;
+        padding: 25px 15px;
+    }
 
-    font-size:1rem;
-
-    color:#3a3a3a;
-
-    margin-bottom:18px;
+    .hero h2 {
+        font-size: 28px;
+    }
 }
-
-/* =========================================
-   BOOK SECTION
-========================================= */
-
-.book-layout{
-
-    display:grid;
-
-    grid-template-columns:
-    240px 1fr;
-
-    gap:55px;
-
-    align-items:center;
-}
-
-.book-cover img{
-
-    width:100%;
-
-    border:1px solid var(--line);
-
-    box-shadow:
-    0 4px 12px rgba(0,0,0,0.04);
-}
-
-.book-label{
-
-    color:var(--gold);
-
-    letter-spacing:3px;
-
-    font-size:0.75rem;
-
-    margin-bottom:14px;
-}
-
-.book-info h3{
-
-    font-size:3rem;
-
-    margin-bottom:18px;
-
-    color:#181818;
-}
-
-.book-buttons{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:18px;
-
-    flex-wrap:wrap;
-
-    margin-top:28px;
-}
-
-.coming-soon{
-
-    color:#777;
-
-    font-size:0.92rem;
-}
-
-/* =========================================
-   AUTHOR
-========================================= */
-
-.author-layout{
-
-    display:grid;
-
-    grid-template-columns:
-    160px 1fr;
-
-    gap:40px;
-
-    align-items:start;
-}
-
-.author-layout img{
-
-    width:160px;
-    height:160px;
-
-    object-fit:cover;
-
-    border-radius:6px;
-
-    border:1px solid var(--line);
-}
-
-.author-text{
-
-    max-width:760px;
-}
-
-/* =========================================
-   PLATFORMS
-========================================= */
-
-.platform-grid{
-
-    display:grid;
-
-    grid-template-columns:
-    repeat(auto-fit,minmax(210px,1fr));
-
-    gap:14px;
-}
-
-.platform-btn{
-
-    background:#171717;
-
-    color:var(--gold-light);
-
-    border:1px solid var(--gold);
-
-    padding:15px;
-
-    text-align:center;
-
-    font-size:0.92rem;
-
-    transition:0.25s;
-}
-
-.platform-btn:hover{
-
-    background:#202020;
-
-    transform:translateY(-2px);
-}
-
-/* =========================================
-   FOOTER
-========================================= */
-
-footer{
-
-    width:min(92%, 1040px);
-
-    margin:70px auto 30px;
-
-    padding-top:26px;
-
-    border-top:1px solid var(--line);
-
-    text-align:center;
-}
-
-footer p{
-
-    color:#777;
-
-    font-size:0.9rem;
-}
-
-/* =========================================
-   MOBILE
-========================================= */
-
-@media(max-width:900px){
-
-.hero{
-
-    padding:65px 0;
-}
-
-.hero-content{
-
-    width:92%;
-}
-
-h1{
-
-    font-size:2.8rem;
-}
-
-.hero-text{
-
-    font-size:0.98rem;
-}
-
-.section{
-
-    width:92%;
-
-    margin:65px auto;
-}
-
-h2{
-
-    font-size:2rem;
-}
-
-.book-layout,
-.author-layout{
-
-    grid-template-columns:1fr;
-
-    gap:30px;
-}
-
-.book-cover img{
-
-    max-width:240px;
-
-    margin:auto;
-}
-
-.book-info h3{
-
-    font-size:2.4rem;
-}
-
-.author-layout img{
-
-    margin:auto;
-}
-
-.main-btn,
-.platform-btn{
-
-    width:100%;
-}
-
-.hero-buttons,
-.book-buttons{
-
-    flex-direction:column;
-
-    align-items:stretch;
-}
-
-.platform-grid{
-
-    grid-template-columns:1fr;
-}
+.enter-btn {
+    display: inline-block;
+    padding: 16px 32px;
+    font-size: 18px;
+    border-radius: 12px;
+    background: #c8a96a;
+    color: #111;
+    text-decoration: none;
+    font-weight: 600;
 }
