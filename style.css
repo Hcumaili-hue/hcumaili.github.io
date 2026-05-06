@@ -284,6 +284,7 @@ blockquote{
 /* =====================================
    ARCHIVE WINDOWS
 ===================================== */
+
 .archive-section{
 
     width:90%;
@@ -293,12 +294,8 @@ blockquote{
 
 .archive-grid{
 
-    display:grid;
-
-    grid-template-columns:
-    repeat(auto-fit,minmax(320px,1fr));
-
-    gap:40px;
+    display:flex;
+    justify-content:center;
 }
 
 .archive-window{
@@ -307,27 +304,24 @@ blockquote{
 
     border:1px solid #d9c7a0;
 
-    padding:22px;
-
-    position:relative;
-
-    transition:0.35s ease;
-
-    min-height:390px;
+    padding:34px;
 
     display:flex;
-    flex-direction:column;
-    justify-content:space-between;
+    align-items:center;
 
-    box-shadow:
-    0 12px 30px rgba(0,0,0,0.05);
+    gap:42px;
 
     width:100%;
-    max-width:420px;
+    max-width:950px;
 
     margin:auto;
 
     border-radius:4px;
+
+    box-shadow:
+    0 12px 30px rgba(0,0,0,0.05);
+
+    transition:0.35s ease;
 }
 
 .archive-window:hover{
@@ -346,52 +340,55 @@ blockquote{
 
     color:#9b7b42;
 
-    margin-bottom:24px;
+    margin-bottom:20px;
 }
 
 .archive-book{
 
-    width:95px;
+    width:240px;
 
-    margin:auto;
+    flex-shrink:0;
 
     box-shadow:
     0 10px 25px rgba(0,0,0,0.14);
 }
 
+.archive-info{
+
+    flex:1;
+}
+
 .archive-window h3{
 
-    font-size:1.8rem;
+    font-size:2.4rem;
 
-    text-align:center;
+    margin-bottom:16px;
 
-    margin-top:22px;
-
-    margin-bottom:12px;
+    text-align:left;
 }
 
 .archive-window p{
 
-    text-align:center;
-
     color:#555;
 
-    font-size:0.98rem;
+    font-size:1.05rem;
 
-    max-width:320px;
+    line-height:1.8;
 
-    margin:auto;
+    max-width:500px;
+
+    margin:0;
+
+    text-align:left;
 }
 
 .archive-btn{
 
-    display:block;
+    display:inline-block;
+
+    margin-top:32px;
 
     width:70px;
-
-    margin:auto;
-
-    margin-top:30px;
 
     background:#111;
 
@@ -421,22 +418,30 @@ blockquote{
     color:#111;
 }
 
-.disabled-btn{
+/* MOBILE */
 
-    opacity:0.5;
+@media(max-width:900px){
 
-    pointer-events:none;
-}
-
-.coming-box{
-
-    flex:1;
-
-    display:flex;
+.archive-window{
 
     flex-direction:column;
 
-    justify-content:center;
+    text-align:center;
+
+    padding:28px;
+}
+
+.archive-book{
+
+    width:180px;
+}
+
+.archive-window h3,
+.archive-window p{
+
+    text-align:center;
+}
+
 }
 
 /* =====================================
