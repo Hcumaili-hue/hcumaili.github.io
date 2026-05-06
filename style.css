@@ -266,55 +266,152 @@ blockquote{
     color:#666;
 }
 
-/* BOOK */
+/* =====================================
+   ARCHIVE WINDOWS
+===================================== */
 
-.book-grid{
+.archive-section{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:100px auto;
+}
+
+.archive-grid{
 
     display:grid;
 
     grid-template-columns:
-    320px 1fr;
+    repeat(auto-fit,minmax(320px,1fr));
 
-    gap:70px;
-
-    align-items:center;
+    gap:40px;
 }
 
-.book-cover{
+.archive-window{
 
-    width:100%;
+    background:#fbf8f1;
 
-    max-width:320px;
+    border:1px solid #d9c7a0;
+
+    padding:30px;
+
+    position:relative;
+
+    transition:0.35s ease;
+
+    min-height:520px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:space-between;
+
+    box-shadow:
+    0 12px 30px rgba(0,0,0,0.05);
+}
+
+.archive-window:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:
+    0 18px 45px rgba(0,0,0,0.08);
+}
+
+.window-top{
+
+    font-size:0.75rem;
+
+    letter-spacing:3px;
+
+    color:#9b7b42;
+
+    margin-bottom:24px;
+}
+
+.archive-book{
+
+    width:190px;
 
     margin:auto;
 
     box-shadow:
-    0 10px 30px rgba(0,0,0,0.10);
+    0 10px 25px rgba(0,0,0,0.14);
 }
 
-.small-label{
+.archive-window h3{
 
-    color:#b08a47;
+    font-size:2.3rem;
+
+    text-align:center;
+
+    margin-top:30px;
+
+    margin-bottom:18px;
+}
+
+.archive-window p{
+
+    text-align:center;
+
+    color:#555;
+
+    font-size:0.98rem;
+
+    max-width:320px;
+
+    margin:auto;
+}
+
+.archive-btn{
+
+    display:block;
+
+    width:100%;
+
+    background:#111;
+
+    color:#fff;
+
+    text-decoration:none;
+
+    text-align:center;
+
+    padding:16px;
+
+    margin-top:30px;
 
     letter-spacing:2px;
 
     font-size:0.78rem;
 
-    margin-bottom:18px;
+    transition:0.3s ease;
 }
 
-.book-info h3{
+.archive-btn:hover{
 
-    font-size:3.2rem;
-
-    margin-bottom:20px;
+    background:#000;
 }
 
-.book-info p{
+.disabled-btn{
 
-    margin-bottom:28px;
+    opacity:0.5;
 
-    color:#444;
+    pointer-events:none;
+}
+
+.coming-box{
+
+    flex:1;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
 }
 
 /* AUTHOR */
