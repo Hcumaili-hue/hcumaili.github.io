@@ -535,6 +535,8 @@ footer{
    MOBILE
 ===================================== */
 
+@media(max-width:900px){
+
 .hero{
     min-height:420px;
 }
@@ -548,10 +550,6 @@ footer{
     flex-wrap:wrap;
     justify-content:center;
     gap:14px;
-}
-
-.hero{
-    min-height:340px;
 }
 
 .hero-content{
