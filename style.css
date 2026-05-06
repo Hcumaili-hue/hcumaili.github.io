@@ -1,347 +1,65 @@
 /* =========================
-   style.css
+   BOOK SECTION
 ========================= */
 
-:root {
+.book-section{
 
-    --bg: #f3efe6;
-    --paper: #faf8f2;
-
-    --black: #111111;
-    --gold: #b08a47;
-    --gold-light: #d4af63;
-
-    --text: #232323;
-    --line: #ddd2b7;
+    margin-top:100px;
 }
 
-/* RESET */
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
-body{
-
-    background:
-    linear-gradient(rgba(243,239,230,0.94),
-    rgba(243,239,230,0.96)),
-    url("https://www.transparenttextures.com/patterns/paper-fibers.png");
-
-    color:var(--text);
-
-    font-family:'Inter',sans-serif;
-
-    line-height:1.9;
-}
-
-/* WRAPPER */
-
-.site-wrapper{
-
-    width:92%;
-    max-width:1200px;
-
-    margin:40px auto;
-
-    background:var(--paper);
-
-    border:1px solid var(--line);
-
-    padding:45px;
-
-    box-shadow:
-    0 10px 40px rgba(0,0,0,0.08);
-}
-
-/* HERO */
-
-.hero{
+.book-layout{
 
     display:grid;
 
     grid-template-columns:
-    1.2fr 1fr;
+    420px 1fr;
 
-    gap:50px;
-
-    align-items:center;
-}
-
-.hero-image img{
-
-    width:100%;
-
-    border:1px solid #2c2c2c;
-
-    display:block;
-}
-
-.hero-line{
-
-    width:90px;
-    height:2px;
-
-    background:var(--gold);
-
-    margin-bottom:25px;
-}
-
-h1,h2,h3{
-
-    font-family:
-    'Cormorant Garamond',
-    serif;
-
-    color:#181818;
-}
-
-h1{
-
-    font-size:4.5rem;
-
-    line-height:1;
-
-    margin-bottom:20px;
-}
-
-.subtitle{
-
-    font-size:1.1rem;
-
-    max-width:500px;
-
-    color:#444;
-
-    margin-bottom:35px;
-}
-
-/* BUTTONS */
-
-.hero-buttons{
-
-    display:flex;
-
-    flex-wrap:wrap;
-
-    gap:18px;
-}
-
-.main-btn,
-.platform-btn{
-
-    display:flex;
+    gap:70px;
 
     align-items:center;
 
-    justify-content:center;
-
-    gap:10px;
-
-    background:#111;
-
-    color:var(--gold-light);
-
-    border:1px solid var(--gold);
-
-    text-decoration:none;
-
-    transition:0.3s;
-
-    font-size:0.96rem;
-
-    letter-spacing:0.5px;
+    margin-top:45px;
 }
 
-.main-btn{
+.book-cover{
 
-    padding:15px 28px;
-}
-
-.platform-btn{
-
-    padding:16px;
-
-    min-height:64px;
-}
-
-.main-btn:hover,
-.platform-btn:hover{
-
-    background:#1d1d1d;
-
-    transform:translateY(-3px);
-
-    color:#f3cf86;
-}
-
-/* SECTIONS */
-
-.section{
-
-    margin-top:90px;
-}
-
-h2{
-
-    font-size:2.5rem;
-
-    margin-bottom:28px;
-
-    border-bottom:1px solid var(--line);
-
-    padding-bottom:14px;
-}
-
-p{
-
-    margin-bottom:24px;
-
-    font-size:1.05rem;
-
-    color:#333;
-}
-
-/* BLOCKQUOTE */
-
-blockquote{
-
-    margin-top:40px;
-
-    border-left:3px solid var(--gold);
-
-    padding-left:20px;
-
-    font-style:italic;
-
-    color:#666;
-}
-
-/* BOOK */
-
-.book-grid{
-
-    display:grid;
-
-    grid-template-columns:
-    380px 1fr;
-
-    gap:50px;
-
-    align-items:center;
+    position:relative;
 }
 
 .book-cover img{
 
     width:100%;
 
-    border:1px solid var(--line);
+    display:block;
+
+    border:1px solid #d6c6a1;
 
     box-shadow:
-    0 15px 40px rgba(0,0,0,0.12);
+    0 20px 50px rgba(0,0,0,0.14);
+
+    transition:0.4s;
 }
 
-/* AUTHOR */
+.book-cover img:hover{
 
-.author-box{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:35px;
+    transform:
+    translateY(-6px);
 }
 
-.author-box img{
+.book-details h3{
 
-    width:170px;
-    height:170px;
+    font-size:3rem;
 
-    border-radius:50%;
-
-    object-fit:cover;
-
-    border:3px solid var(--gold);
+    margin-bottom:20px;
 }
 
-/* PLATFORM GRID */
+.book-details p{
 
-.platform-grid{
+    max-width:650px;
 
-    display:grid;
+    font-size:1.08rem;
 
-    grid-template-columns:
-    repeat(auto-fit,minmax(240px,1fr));
+    color:#444;
 
-    gap:18px;
-}
-
-/* FOOTER */
-
-footer{
-
-    margin-top:100px;
-
-    border-top:1px solid var(--line);
-
-    padding-top:30px;
-
-    text-align:center;
-
-    color:#777;
-}
-
-/* =========================
-   MOBILE
-========================= */
-
-@media(max-width:900px){
-
-    .hero,
-    .book-grid,
-    .author-box{
-
-        grid-template-columns:1fr;
-
-        display:grid;
-    }
-
-    .site-wrapper{
-
-        width:96%;
-
-        padding:22px;
-    }
-
-    h1{
-
-        font-size:3rem;
-    }
-
-    h2{
-
-        font-size:2rem;
-    }
-
-    .main-btn,
-    .platform-btn{
-
-        width:100%;
-    }
-
-    .author-box{
-
-        text-align:center;
-    }
-
-    .author-box img{
-
-        margin:auto;
-    }
+    margin-bottom:30px;
 }
