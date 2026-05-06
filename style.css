@@ -578,11 +578,7 @@ footer{
     gap:14px;
 }
 
-.hero-content{
-    padding:40px 0 60px;
-}
-
-h1{
+.intro-content h1{
     font-size:3rem;
 }
 
@@ -598,74 +594,90 @@ h1{
     font-size:2.2rem;
 }
 
-.book-grid{
-    grid-template-columns:1fr;
-    gap:40px;
+/* BOOK CARD */
+
+.archive-window{
+
+    flex-direction:column;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:30px 24px;
+
+    gap:24px;
+
+    max-width:100%;
 }
 
-.book-info{
+.archive-book{
+
+    width:180px;
+}
+
+.archive-info{
+
+    width:100%;
+}
+
+.archive-window h3{
+
+    text-align:center;
+
+    font-size:2rem;
+
+    margin-bottom:14px;
+}
+
+.archive-window p{
+
+    text-align:center;
+
+    max-width:100%;
+}
+
+.archive-btn{
+
+    margin:auto;
+
+    margin-top:24px;
+}
+
+/* AUTHOR */
+
+.author-box{
+
     text-align:center;
 }
 
-.book-buttons{
-    justify-content:center;
+.profile-image{
+
+    width:130px;
+    height:130px;
 }
 
-.book-info h3{
-    font-size:2.5rem;
-}
+/* PLATFORMS */
 
 .platform-grid{
-    grid-template-columns:1fr 1fr;
+
+    grid-template-columns:1fr;
 }
 
 .btn,
-.library-button{
+.library-button,
+.book-mini-btn{
+
     width:100%;
+
     text-align:center;
 }
 
-.archive-window{
-    width:100%;
-    max-width:100%;
-    min-height:auto;
+footer{
+
+    margin-top:70px;
 }
 
-}
-.intro-section{
-
-    background:#f4f1e8;
-
-    padding:90px 0 70px;
-}
-
-.intro-content{
-
-    width:90%;
-
-    max-width:1100px;
-
-    margin:auto;
-}
-
-.intro-content h1{
-
-    color:#111;
-
-    font-size:4.5rem;
-
-    margin-bottom:22px;
-}
-
-.intro-content .hero-text{
-
-    color:#444;
-
-    max-width:760px;
-
-    font-size:1.08rem;
-
-    margin-bottom:35px;
 }
 /* =====================================
    FIX LAYOUT
