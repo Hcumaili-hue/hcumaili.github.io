@@ -623,3 +623,56 @@ h1{
 }
 
 }
+/* MINI BOOK BUTTON */
+
+.book-mini-btn{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    width:150px;
+
+    height:48px;
+
+    border:1px solid #d4af63;
+
+    color:#d4af63;
+
+    text-decoration:none;
+
+    font-size:0.92rem;
+
+    transition:0.3s;
+}
+
+.book-mini-btn:hover{
+
+    background:#d4af63;
+
+    color:#111;
+}
+
+/* ICON BUTTON */
+
+.archive-btn{
+
+    width:70px;
+
+    margin:auto;
+
+    font-size:1.4rem;
+
+    padding:14px 0;
+
+    border-radius:2px;
+}
+
+/* COMING SECTION */
+
+.coming-section{
+
+    margin-top:20px;
+}
