@@ -1,222 +1,280 @@
-/* ===== General ===== */
+/* =======================================================
+   GOD OR RELIGION? — Academic Minimal Style
+======================================================= */
+
+/* ===== Global ===== */
+
 body {
-    font-family: Georgia, serif;
     margin: 0;
-    background: #f9f9f9;
+    padding: 0;
+    background: #f8f6f2;
     color: #222;
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.95;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
 }
 
-/* ===== Global Links ===== */
+/* ===== Links ===== */
+
 a {
-    color: #c8a96a;
+    color: #b8965b;
     text-decoration: none;
-}
-
-a:visited {
-    color: #c8a96a;
+    transition: 0.25s;
 }
 
 a:hover {
-    color: #e0c080;
-}
-
-/* ===== Unified Buttons ===== */
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background: #111;
-    color: #c8a96a;
-    border: 1px solid #c8a96a;
-    text-decoration: none;
-    border-radius: 8px;
-    transition: 0.3s;
-    font-size: 14px;
-}
-
-.btn:hover {
-    background: #c8a96a;
-    color: #000;
+    color: #d4b278;
 }
 
 /* ===== Hero Section ===== */
+
 .hero {
-    text-align: center;
-    padding: 80px 20px 40px;
     background: #111;
     color: #c8a96a;
+    text-align: center;
+    padding: 110px 20px 80px;
 }
 
-.hero h2 {
-    font-size: 36px;
-    margin-bottom: 10px;
+.hero h1 {
+    font-size: 52px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
 }
 
 .hero p {
-    color: #aaa;
+    max-width: 760px;
+    margin: auto;
+    color: #b9b9b9;
+    font-size: 20px;
+    line-height: 1.8;
 }
 
-/* ===== Content ===== */
-.content {
-    max-width: 800px;
-    margin: 60px auto;
-    padding: 20px;
-    line-height: 2;
-    font-size: 18px;
-    background: #fffdf8;
+/* ===== Main Reading Area ===== */
+
+.article {
+    max-width: 860px;
+    margin: 90px auto;
+    padding: 0 35px;
 }
 
-.text-block p {
+/* ===== Main Titles ===== */
+
+.article h1 {
+    font-size: 44px;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-top: 90px;
+    margin-bottom: 25px;
+    text-align: center;
+    color: #111;
+}
+
+.article h2 {
+    font-size: 30px;
+    font-weight: 600;
+    margin-top: 80px;
     margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #d8d2c8;
+    color: #1a1a1a;
 }
 
-.text-block h3 {
-    margin-top: 40px;
-    margin-bottom: 15px;
-    font-size: 22px;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 5px;
+.article h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    color: #222;
 }
 
-/* ===== Library Layout ===== */
+/* ===== Paragraphs ===== */
+
+.article p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    text-align: justify;
+}
+
+/* ===== Lists ===== */
+
+.article ul {
+    margin-top: 20px;
+    margin-bottom: 35px;
+    padding-left: 30px;
+}
+
+.article li {
+    margin-bottom: 14px;
+    font-size: 20px;
+}
+
+/* ===== Horizontal Lines ===== */
+
+.article hr {
+    border: none;
+    border-top: 1px solid #d8d2c8;
+    margin: 70px 0;
+}
+
+/* ===== Quotes ===== */
+
+blockquote {
+    border-left: 4px solid #c8a96a;
+    padding-left: 22px;
+    margin: 40px 0;
+    color: #555;
+    font-style: italic;
+    line-height: 1.9;
+}
+
+/* ===== Manuscript Images ===== */
+
+.manuscript {
+    margin: 70px auto;
+    max-width: 760px;
+    text-align: center;
+}
+
+.manuscript img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.manuscript figcaption {
+    margin-top: 14px;
+    font-size: 15px;
+    color: #666;
+    line-height: 1.7;
+    font-style: italic;
+}
+
+/* ===== Buttons ===== */
+
+.btn,
+.enter-btn {
+    display: inline-block;
+    padding: 14px 28px;
+    background: #111;
+    color: #c8a96a;
+    border: 1px solid #c8a96a;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn:hover,
+.enter-btn:hover {
+    background: #c8a96a;
+    color: #111;
+}
+
+/* ===== Library ===== */
+
 .library-container {
-    max-width: 1100px;
-    margin: 80px auto;
-    padding: 20px;
+    max-width: 1200px;
+    margin: 100px auto;
+    padding: 0 30px;
     text-align: center;
 }
 
 .library {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
-    margin-top: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
 }
 
 /* ===== Book Cards ===== */
+
 .book-card {
     display: block;
     background: #111;
     color: #c8a96a;
-    padding: 40px 20px;
-    border-radius: 12px;
-    text-decoration: none;
     border: 1px solid #c8a96a;
+    border-radius: 14px;
+    padding: 30px;
     transition: 0.3s;
 }
 
 .book-card:hover {
-    transform: translateY(-5px);
-    background: #1a1a1a;
+    transform: translateY(-6px);
+    background: #181818;
 }
 
 .book-card img {
     width: 100%;
     border-radius: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
-/* Disabled Card */
+.book-card h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    color: #c8a96a;
+}
+
+.book-card p {
+    color: #aaa;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* ===== Disabled Card ===== */
+
 .book-card.disabled {
-    background: #eee;
+    background: #ece8df;
     color: #888;
     border: none;
 }
 
-/* ===== Article (Reading Mode) ===== */
-.article {
-    max-width: 720px;
-    margin: 100px auto;
-    padding: 40px 25px;
-    line-height: 2.1;
-    font-size: 20px;
-    background: #fffdf8;
-}
-
-.article h1 {
-    font-size: 42px;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.article h2 {
-    font-size: 26px;
-    margin-top: 60px;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 8px;
-}
-
-.article p {
-    margin-bottom: 22px;
-    text-align: justify;
-}
-
 /* ===== Footer ===== */
+
 footer {
     text-align: center;
-    padding: 30px;
-    font-size: 14px;
+    padding: 60px 20px 40px;
     color: #777;
+    font-size: 15px;
 }
 
 /* ===== Mobile ===== */
+
 @media (max-width: 768px) {
-    .article {
+
+    .hero {
+        padding: 90px 20px 60px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero p {
         font-size: 18px;
-        padding: 25px 15px;
     }
 
-    .hero h2 {
-        font-size: 28px;
+    .article {
+        padding: 0 20px;
+        margin: 70px auto;
     }
-}
-.enter-btn {
-    display: inline-block;
-    padding: 16px 32px;
-    font-size: 18px;
-    border-radius: 12px;
-    background: #c8a96a;
-    color: #111;
-    text-decoration: none;
-    font-weight: 600;
-}
-/* Manuscript image block (Medium style) */
-.manuscript {
-  margin: 50px auto;
-  max-width: 720px;
-  text-align: center;
-}
 
-.manuscript img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
+    .article h1 {
+        font-size: 34px;
+    }
 
-.manuscript figcaption {
-  font-size: 14px;
-  color: #6b6b6b;
-  margin-top: 12px;
-  line-height: 1.6;
-  font-style: italic;
-}
-body {
-    font-family: Georgia, "Times New Roman", serif;
-    background: #f8f6f2;
-    color: #222;
-    max-width: 850px;
-    margin: auto;
-    padding: 50px;
-    line-height: 1.9;
-    font-size: 19px;
-}
+    .article h2 {
+        font-size: 26px;
+    }
 
-h1, h2 {
-    font-weight: 600;
-    margin-top: 60px;
-}
+    .article h3 {
+        font-size: 22px;
+    }
 
-hr {
-    border: none;
-    border-top: 1px solid #d6d0c8;
-    margin: 50px 0;
+    .article p,
+    .article li {
+        font-size: 18px;
+    }
 }
