@@ -626,25 +626,17 @@ footer p{
 
 }
 
-.link-icon{
+.link-box{
 
-  display:flex;
-  align-items:center;
-  justify-content:center;
+  background:var(--paper);
 
-  margin-bottom:22px;
-}
+  border:1px solid var(--border);
 
-.link-icon i{
+  border-radius:28px;
 
-  font-size:2.8rem;
+  padding:42px 28px;
 
-  color:var(--accent);
+  transition:.35s;
 
-  transition:.3s;
-}
-
-.link-box:hover .link-icon i{
-
-  transform:scale(1.08);
+  text-align:center;
 }
