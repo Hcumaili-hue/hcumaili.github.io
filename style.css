@@ -822,3 +822,10 @@ footer p{
 
   color:var(--muted);
 }
+.hero::before{
+    background: rgba(0,0,0,0.05) !important;
+}
+
+.hero img{
+    filter: brightness(1.12) contrast(1.05);
+}
