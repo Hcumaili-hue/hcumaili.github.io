@@ -356,15 +356,15 @@ nav a.active{
 
 .book-container{
 
-  width:min(1120px,90%);
+  width:min(980px,90%);
 
   margin:auto;
 
   display:grid;
 
-  grid-template-columns:390px 1fr;
+  grid-template-columns:300px 1fr;
 
-  gap:90px;
+  gap:70px;
 
   align-items:center;
 }
