@@ -659,8 +659,10 @@ nav a.active{
 
 .enter-btn{
 
-  width:54px;
-  height:54px;
+  width:62px;
+  height:62px;
+
+  margin:auto;
 
   border-radius:50%;
 
@@ -675,6 +677,15 @@ nav a.active{
   transition:.3s;
 }
 
+.enter-btn:hover{
+
+  transform:translateY(-3px) scale(1.06);
+}
+
+.enter-btn i{
+
+  font-size:1rem;
+}
 .enter-btn:hover{
 
   transform:scale(1.08);
